@@ -191,16 +191,13 @@
                     button.classList.remove('disabled');
                 });
             }
-
             function showFile(fileName) {
                 if (currentLab) {
                     const filePath = `laba${currentLab}/${fileName}`;
                     document.getElementById('labFrame').src = filePath;
                 }
             }
-
             document.addEventListener('DOMContentLoaded', () => {
-                // Під час завантаження сторінки жодна лабораторна робота не вибрана
                 currentLab = '';
                 const sidebarButtons = document.querySelectorAll('.sidebar div');
                 sidebarButtons.forEach(button => {
