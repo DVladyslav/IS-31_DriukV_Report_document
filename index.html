@@ -27,7 +27,7 @@
             left: 50%;
             transform: translateX(-40%);
             text-align: center;
-            margin-right: 20px; 
+            margin-right: 20px;
         }
 
         .header-content {
@@ -79,6 +79,7 @@
             float: left;
             width: 25%;
             border-right: 1px solid black;
+            display: none;
         }
 
         .sidebar div {
@@ -87,13 +88,12 @@
             border: 1px solid black;
             border-radius: 5px;
             cursor: pointer;
-            background-color: lightgray;
+            background-color: rgb(166, 240, 199);
             transition: background-color 0.3s;
         }
 
         .sidebar div:hover {
-            background-color: gray;
-            color: white;
+            background-color: rgb(255, 255, 255);
         }
 
         .sidebar div.disabled {
@@ -156,13 +156,26 @@
             </div>
 
             <div class="sidebar" id="sidebar">
-                <div onclick="showFile('description.html')">Опис предметного середовища</div>
-                <div onclick="showFile('topic.html')">Тема, Мета, Місце розташування</div>
-                <div onclick="showFile('structure.html')">СТРУКТУРА ДОКУМЕНТА</div>
-                <div onclick="showFile('html_tables.html')">HTML-код ТАБЛИЦЬ</div>
-                <div onclick="showFile('html_forms_and_lists.html')">HTML-код ФОРМИ та СПИСКІВ</div>
-                <div onclick="showFile('html_images.html')">HTML-код ЗОБРАЖЕННЯ</div>
-                <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                <div id="lab1" class="lab-buttons">
+                    <div onclick="showFile('description.html')">Опис предметного середовища</div>
+                    <div onclick="showFile('topic.html')">Тема, Мета, Місце розташування</div>
+                    <div onclick="showFile('structure.html')">СТРУКТУРА ДОКУМЕНТА</div>
+                    <div onclick="showFile('html_tables.html')">HTML-код ТАБЛИЦЬ</div>
+                    <div onclick="showFile('html_forms_and_lists.html')">HTML-код ФОРМИ та СПИСКІВ</div>
+                    <div onclick="showFile('html_images.html')">HTML-код ЗОБРАЖЕННЯ</div>
+                    <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                </div>
+                <div id="lab2" class="lab-buttons">
+                    <div onclick="showFile('topic.html')">Тема, метa ЛР №2. Місце розташування сайту, звіту</div>
+                    <div onclick="showFile('sposib_style.html')">Способи підключення стилів</div>
+                    <div onclick="showFile('seleсtor.html')">СЕЛЕКТОРИ</div>
+                    <div onclick="showFile('type_seleсtor.html')">Cелектори тегу</div>
+                    <div onclick="showFile('class_seleсtor.html')">Селектори класу</div>
+                    <div onclick="showFile('id_selector.html')">Селектори ідентифікаторів</div>
+                    <div onclick="showFile('other_selector.html')">Інші селектори</div>
+                    <div onclick="showFile('css_text_style.html')">CSS: Шрифти, текст, таблиці, фон, контур, списки. CSS просунутий </div>
+                    <div onclick="showFile('conclusions.html')">ВИСНОВКИ</div>
+                </div>
             </div>
 
             <div class="main-content" id="output">
@@ -186,10 +199,17 @@
                 buttonElement.classList.add('active');
                 activeButton = buttonElement;
 
-                const sidebarButtons = document.querySelectorAll('.sidebar div');
-                sidebarButtons.forEach(button => {
-                    button.classList.remove('disabled');
+                const sidebar = document.getElementById('sidebar');
+                sidebar.style.display = 'block';
+
+                document.querySelectorAll('.lab-buttons').forEach(buttonSet => {
+                    buttonSet.style.display = 'none';
                 });
+
+                const labButtons = document.getElementById(`lab${labNumber}`);
+                if (labButtons) {
+                    labButtons.style.display = 'block';
+                }
             }
             function showFile(fileName) {
                 if (currentLab) {
@@ -199,10 +219,6 @@
             }
             document.addEventListener('DOMContentLoaded', () => {
                 currentLab = '';
-                const sidebarButtons = document.querySelectorAll('.sidebar div');
-                sidebarButtons.forEach(button => {
-                    button.classList.add('disabled');
-                });
             });
         </script>
 
