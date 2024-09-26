@@ -28,6 +28,12 @@
         <h3>Приклад:</h3>
         <pre><code>&lt;p style="color: red; font-size: 16px;">Цей текст червоний і має розмір 16px.&lt;/p></code></pre>
         <p style="color: red; font-size: 16px;">Цей текст червоний і має розмір 16px.</p>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax"
+            style="color:#000020;background:#f6f8ff;"><span class="line_wrapper">&lt;<span style="color:#200080; font-weight:bold; ">p</span> <span style="color:#200080; font-weight:bold; ">style</span>="color<span style="color:#308080; ">:</span><span style="color:#308080; ">#</span>ffffff<span style="color:#ffffff; background:#dd9999; font-weight:bold; font-style:italic; ">;</span> font-size<span style="color:#406080; ">:</span>large"<span style="color:#308080; ">&gt;</span>Ознайомтеся з описом нашої предметної області на &lt;<span style="color:#200080; font-weight:bold; ">a</span> <span style="color:#200080; font-weight:bold; ">style</span>="color<span style="color:#406080; ">:</span>rgb(254<span style="color:#308080; ">,</span> 134<span style="color:#308080; ">,</span> 59)"</span>
+            <span class="line_wrapper">                        href="https<span style="color:#308080; ">:</span>//dvladyslav.github<span style="color:#308080; ">.</span>io/IS-31_Driuk_Description_subject_area/"<span style="color:#308080; ">&gt;</span>цій сторінці&lt;/<span style="color:#200080; font-weight:bold; ">a</span><span style="color:#308080; ">&gt;</span><span style="color:#308080; ">.</span>&lt;/<span style="color:#200080; font-weight:bold; ">p</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/image1.png" alt="image1">
         <p>Переваги:</p>
         <ul>
             <li>Легкість у використанні для окремих елементів.</li>
@@ -39,6 +45,7 @@
             <li>Важко підтримувати та змінювати стилі в майбутньому.</li>
             <li>Може призвести до дублювання стилів.</li>
         </ul>
+
         <h2>2. Internal-стилі (Внутрішні стилі)</h2>
         <p>Стилі визначаються всередині HTML-документа в секції &lt;head&gt; за допомогою тегу &lt;style&gt;. Цей підхід
             використовується, коли стилі потрібні лише для одного HTML-документа.</p>
@@ -64,6 +71,24 @@
         <div class="class1">
             <p>Цей текст синій і має розмір 18px.</p>
         </div>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+            <span class="line_wrapper">&lt;<span style="color:#200080; font-weight:bold; ">style</span><span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">        <span style="color:#200080; font-weight:bold; ">p</span> <span style="color:#406080; ">{</span></span>
+            <span class="line_wrapper">            <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">5E5959</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">            <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">xx-large</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">            <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">        <span style="color:#406080; ">}</span></span>
+            <span class="line_wrapper"></span>
+            <span class="line_wrapper">        <span style="color:#200080; font-weight:bold; ">h1</span> <span style="color:#406080; ">{</span></span>
+            <span class="line_wrapper">            <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#400000; ">rgb</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper"></span>
+            <span class="line_wrapper">            <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">        <span style="color:#406080; ">}</span></span>
+            <span class="line_wrapper">    &lt;/<span style="color:#200080; font-weight:bold; ">style</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/image2.png" alt="image2" style="width:100%;">
+        <img src="./images_laba2/image3.png" alt="image3">
         <p>Переваги:</p>
         <ul>
             <li>Стилі знаходяться в одному місці разом з HTML-кодом.</li>
@@ -78,6 +103,7 @@
         <p>Цей метод передбачає підключення зовнішнього CSS-файлу до HTML-документа за допомогою тегу &lt;link&gt;, який
             розміщується в секції &lt;head&gt;. Зовнішні стилі підходять для великих проєктів, де один файл стилів
             використовується для кількох сторінок.</p>
+
         <h3>Приклад:</h3>
         <p>index.html</p>
         <pre><code>
@@ -100,6 +126,24 @@
             font-size: 20px;
         }
         </code></pre>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+            <span class="line_wrapper">&lt;<span style="color:#200080; font-weight:bold; ">head</span><span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">meta</span> charset="UTF-8"<span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">meta</span> name="viewport" content="width=device-width<span style="color:#308080; ">,</span> initial-scale=1<span style="color:#308080; ">.</span>0"<span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper"><span style="color:#595979; ">     &lt;!--</span> Google <span style="color:#200080; font-weight:bold; ">font</span><span style="color:#595979; "> --&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">link</span> href="https<span style="color:#308080; ">:</span>//fonts.googleapis<span style="color:#308080; ">.</span>com/css?family=Jura<span style="color:#406080; ">:</span>300<span style="color:#308080; ">,</span>regular<span style="color:#308080; ">,</span>500<span style="color:#308080; ">,</span>600<span style="color:#308080; ">,</span>700" rel="stylesheet"<span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper"><span style="color:#595979; ">    &lt;!--</span> Slider by w3schools<span style="color:#595979; "> --&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">link</span> rel="stylesheet" href="https<span style="color:#308080; ">:</span>//maxcdn.bootstrapcdn<span style="color:#308080; ">.</span>com/bootstrap/3.4<span style="color:#308080; ">.</span>1/css/bootstrap.min<span style="color:#308080; ">.</span>css"<span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">script</span> src="https<span style="color:#308080; ">:</span>//ajax.googleapis<span style="color:#308080; ">.</span>com/ajax/libs/jquery/3.7<span style="color:#308080; ">.</span>1/jquery.min<span style="color:#308080; ">.</span>js"<span style="color:#308080; ">&gt;</span>&lt;/<span style="color:#200080; font-weight:bold; ">script</span><span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">script</span> src="https<span style="color:#308080; ">:</span>//maxcdn.bootstrapcdn<span style="color:#308080; ">.</span>com/bootstrap/3.4<span style="color:#308080; ">.</span>1/js/bootstrap.min<span style="color:#308080; ">.</span>js"<span style="color:#308080; ">&gt;</span>&lt;/<span style="color:#200080; font-weight:bold; ">script</span><span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">link</span> rel="icon" href="images/favicon<span style="color:#308080; ">.</span>ico" type="image/x-icon"<span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">link</span> rel="stylesheet" href="<span style="color:#308080; ">.</span>/<span style="color:#200080; font-weight:bold; ">style</span><span style="color:#308080; ">.</span>css"<span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">    &lt;<span style="color:#200080; font-weight:bold; ">title</span><span style="color:#308080; ">&gt;</span>SPORTIFY | СПОРТ-КОМПЛЕКСИ&lt;/<span style="color:#200080; font-weight:bold; ">title</span><span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper">&lt;/<span style="color:#200080; font-weight:bold; ">head</span><span style="color:#308080; ">&gt;</span></span>
+            <span class="line_wrapper"></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/image4.png" alt="image4" style="width:100%;">
         <p>Переваги:</p>
         <ul>
             <li>Легко підтримувати і оновлювати стилі.</li>

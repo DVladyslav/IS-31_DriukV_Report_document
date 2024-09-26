@@ -1,15 +1,181 @@
 <!DOCTYPE html>
 <html lang="en">
+
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
     <title>Document</title>
 </head>
+
 <body>
-    <header><h1>Інші селектори</h1></header>
+    <header>
+        <h1>Інші селектори</h1>
+    </header>
     <main>
-        Бр2Ю
+        <h2> Сусідній селектор</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+        <span class="line_wrapper"><span style="color:#308080; ">.</span>custom-block-coach <span style="color:#200080; font-weight:bold; ">h2</span> <span style="color:#308080; ">+</span> <span style="color:#200080; font-weight:bold; ">ul</span> <span style="color:#200080; font-weight:bold; ">li</span> <span style="color:#406080; ">{</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">000000</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">x-large</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">list-style-type</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">none</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">position</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">relative</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding-left</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+        <span class="line_wrapper"></span></pre>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+        <span class="line_wrapper">&lt;<span style="color:#200080; font-weight:bold; ">div</span> class="custom-block-coach"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                    &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="custom-image-container"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">img</span> src="<span style="color:#308080; ">.</span>/photo/tetiana_kravchenko<span style="color:#308080; ">.</span>png" alt="kateryna_romanenko"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                    &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                    &lt;<span style="color:#200080; font-weight:bold; ">h2</span><span style="color:#308080; ">&gt;</span>✦ Тетяна Кравченко ✦&lt;/<span style="color:#200080; font-weight:bold; ">h2</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                    &lt;<span style="color:#200080; font-weight:bold; ">ul</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">li</span><span style="color:#308080; ">&gt;</span>Чемпіонка області з плавання<span style="color:#308080; ">,</span> сертифікований інструктор з аквааеробіки та аква-йоги<span style="color:#308080; ">.</span>&lt;/<span style="color:#200080; font-weight:bold; ">li</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">li</span><span style="color:#308080; ">&gt;</span>Освіта<span style="color:#308080; ">:</span> Київський університет фізичної культури<span style="color:#308080; ">,</span> спеціаліст з водних видів спорту та фітнесу<span style="color:#308080; ">.</span>&lt;/<span style="color:#200080; font-weight:bold; ">li</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">li</span><span style="color:#308080; ">&gt;</span>Девіз<span style="color:#308080; ">:</span> "У воді ти можеш більше<span style="color:#308080; ">,</span> ніж думаєш<span style="color:#308080; ">.</span>"&lt;/<span style="color:#200080; font-weight:bold; ">li</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                    &lt;/<span style="color:#200080; font-weight:bold; ">ul</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">                &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/sys_selector_1.png" alt="sys_selector" style="width:100%;">
+        <h3>Теорія:</h3>
+        <p>Сусідні селектори в CSS — це інструменти, які дозволяють стилізувати елементи на основі їхнього сусідства в
+            документі. Вони застосовуються для вибору елемента, який йде безпосередньо після іншого елемента, тобто є
+            його сусідом. Цей тип селектора особливо корисний, коли потрібно змінити стиль елемента в залежності від
+            того, що передує йому у структурі HTML.</p>
+        <p>Сусідні селектори дозволяють уникнути використання додаткових класів для стилізації, зменшуючи обсяг коду та
+            покращуючи його читабельність. Важливо, що селектор працює лише з тим елементом, який безпосередньо йде
+            після цільового, тому, якщо між ними є інші елементи, сусідній селектор не спрацює.</p>
+        <p>Cинтаксис:</p>
+        <pre><code>
+            selector1 + selector2 {
+            /* стилі для selector2 */
+            }
+        </code></pre>
+        <h2> Cелектор атрибута</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+            <span class="line_wrapper"><span style="color:#200080; font-weight:bold; ">input</span><span style="color:#308080; ">[</span><span style="color:#074726; ">type</span><span style="color:#308080; ">=</span><span style="color:#800000; ">"</span><span style="color:#1060b6; ">text</span><span style="color:#800000; ">"</span><span style="color:#308080; ">]</span> <span style="color:#406080; ">{</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">2</span><span style="color:#006600; ">px</span> <span style="color:#074726; ">solid</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">5e9e6d</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border-radius</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">5</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">100</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">box-shadow</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span> <span style="color:#008c00; ">2</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">5</span><span style="color:#006600; ">px</span> <span style="color:#400000; ">rgba</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0.1</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+            <span class="line_wrapper"></span>
+            <span class="line_wrapper"><span style="color:#200080; font-weight:bold; ">input</span><span style="color:#308080; ">[</span><span style="color:#074726; ">type</span><span style="color:#308080; ">=</span><span style="color:#800000; ">"</span><span style="color:#1060b6; ">tel</span><span style="color:#800000; ">"</span><span style="color:#308080; ">]</span> <span style="color:#406080; ">{</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">2</span><span style="color:#006600; ">px</span> <span style="color:#074726; ">solid</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">5e9e6d</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border-radius</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">5</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">100</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">box-shadow</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span> <span style="color:#008c00; ">2</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">5</span><span style="color:#006600; ">px</span> <span style="color:#400000; ">rgba</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0.1</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+            <span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+            <span class="line_wrapper"></span></pre>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+<span class="line_wrapper"> &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="login-container"<span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                &lt;<span style="color:#200080; font-weight:bold; ">form</span> class="login-form" action="my_sportify<span style="color:#308080; ">.</span>html" method="GET"<span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                    &lt;<span style="color:#200080; font-weight:bold; ">h2</span><span style="color:#308080; ">&gt;</span>Для входу в особистий простір&lt;/<span style="color:#200080; font-weight:bold; ">h2</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                    &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="form-group"<span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">label</span> for="username"<span style="color:#308080; ">&gt;</span>Номер картки клубу<span style="color:#308080; ">:</span>&lt;/<span style="color:#200080; font-weight:bold; ">label</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">input</span> type="<span style="color:#200080; font-weight:bold; ">text</span>" id="username" name="username" required<span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                    &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                    &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="form-group"<span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">label</span> for="tel"<span style="color:#308080; ">&gt;</span>Телефон<span style="color:#308080; ">:</span>&lt;/<span style="color:#200080; font-weight:bold; ">label</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                        &lt;<span style="color:#200080; font-weight:bold; ">input</span> type="tel" id="tel" name="tel" required<span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                    &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                &lt;<span style="color:#200080; font-weight:bold; ">button</span> type="submit"<span style="color:#308080; ">&gt;</span>Увійти&lt;/<span style="color:#200080; font-weight:bold; ">button</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">                &lt;/<span style="color:#200080; font-weight:bold; ">form</span><span style="color:#308080; ">&gt;</span></span>
+<span class="line_wrapper">            &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/atry_selector.png" alt="atry_selector" style="width:100%;">
+        <h3>Теорія:</h3>
+        <p>Селектори атрибутів у CSS дозволяють вибирати елементи HTML на основі значень їх атрибутів. Основний
+            синтаксис селектора атрибута виглядає як [атрибут], що означає, що він вибирає всі елементи, які мають
+            зазначений атрибут, незалежно від його значення. Наприклад, селектор [disabled] вибирає всі елементи з
+            атрибутом disabled.</p>
+        <p>Якщо ви хочете вибрати елементи з певним значенням атрибута, ви можете використати синтаксис
+            [атрибут="значення"]. Це дозволяє вибрати тільки ті елементи, у яких атрибут має вказане значення.
+            Наприклад, [type="text"] вибирає всі текстові поля вводу.</p>
+        <p>Існують також селектори, які дозволяють здійснювати часткові збіги. Селектор [атрибут^="значення"] вибирає
+            елементи, атрибут яких починається з вказаного значення. Наприклад, [href^="http"] вибирає всі посилання,
+            які починаються з http. Селектор [атрибут$="значення"] вибирає елементи, атрибут яких закінчується на
+            вказане значення, наприклад, [src$=".jpg"] вибирає всі зображення з розширенням .jpg. А селектор
+            [атрибут*="значення"] вибирає елементи, атрибут яких містить вказане значення де-небудь у середині, як у
+            випадку [class*="button"], що вибирає всі елементи, у класі яких є слово button.</p>
+        <p>Селектори атрибутів також можуть комбінуватися з іншими селекторами для більш точного вибору елементів.
+            Наприклад, div[data-role="main"] вибирає всі
+        <p>, у яких атрибут data-role має значення main. Завдяки цим селекторам ви можете стилізувати HTML, не додаючи
+            додаткових класів або ідентифікаторів, що робить ваш код чистішим і легшим для підтримки.</p>
+
+        <h2> Дочірній селектор</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+        <span class="line_wrapper"><span style="color:#308080; ">.</span>carousel-inner<span style="color:#308080; ">&gt;</span><span style="color:#308080; ">.</span>item<span style="color:#308080; ">&gt;</span><span style="color:#200080; font-weight:bold; ">img</span> <span style="color:#406080; ">{</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">100</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">max-height</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+        <span class="line_wrapper"><span style="color:#406080; ">}</span></span></pre>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+        <span class="line_wrapper">  &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="carousel-inner"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">     &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="item active"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">       &lt;<span style="color:#200080; font-weight:bold; ">img</span> src="images/eagle<span style="color:#308080; ">.</span>png" alt="Eagle"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">     &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper"></span>
+        <span class="line_wrapper">     &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="item "<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">       &lt;<span style="color:#200080; font-weight:bold; ">img</span> src="images/gepard<span style="color:#308080; ">.</span>png" alt="Gepard"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">     &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper"></span>
+        <span class="line_wrapper">     &lt;<span style="color:#200080; font-weight:bold; ">div</span> class="item"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">        &lt;<span style="color:#200080; font-weight:bold; ">img</span> src="images/bear<span style="color:#308080; ">.</span>png" alt="Bear"<span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">     &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span>
+        <span class="line_wrapper">  &lt;/<span style="color:#200080; font-weight:bold; ">div</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/dau_selector_1.png" alt="dau_selector" style="width:100%;">
+        <p>Це означає, що стиль був застосований до всіх зображень (img), які є безпосередніми дітьми елемента з класом
+            .item, який, в свою чергу, є безпосереднім нащадком .carousel-inner.</p>
+
+        <h3>Теорія:</h3>
+        <p>Дочірні селектори в CSS використовуються для вибору елементів, які є безпосередніми нащадками (дочірніми)
+            певного батьківського елемента. Це дозволяє стилізувати конкретні елементи в структурі HTML, зберігаючи при
+            цьому контроль над тим, які саме елементи отримують ці стилі.</p>
+        <p>Синтаксис дочірніх селекторів виглядає наступним чином:</p>
+        <pre><code>
+                parent > child {
+                /* стилі для child */
+                }
+            </code></pre>
+
+        <h2> Універсальний селектор</h2>
+        <h3>Приклад (з коду сайту):</h3>
+        <pre class="code_syntax"
+            style="color:#000020;background:#f6f8ff;"><span class="line_wrapper"><span style="color:#308080; ">*</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-family</span><span style="color:#308080; ">:</span> <span style="color:#800000; ">'</span><span style="color:#1060b6; ">Jura</span><span style="color:#800000; ">'</span><span style="color:#308080; ">,</span> <span style="color:#074726; ">sans-serif</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">&lt;<span style="color:#200080; font-weight:bold; ">p</span><span style="color:#308080; ">&gt;</span>Наш тренажерний зал обладнаний сучасними тренажерами для всіх груп м'язів<span style="color:#308080; ">.</span> У нас є кардіо-зона з</span>
+<span class="line_wrapper">біговими доріжками<span style="color:#308080; ">,</span> велотренажерами та еліпсами<span style="color:#308080; ">,</span> силові тренажери для ізольованого та</span>
+<span class="line_wrapper">функціонального тренування<span style="color:#308080; ">,</span> а також вільні ваги – штанги<span style="color:#308080; ">,</span> гантелі та гирі для максимально</span>
+<span class="line_wrapper">ефективних занять<span style="color:#308080; ">.</span> Кожен тренажер регулярно перевіряється для забезпечення вашої безпеки та</span>
+<span class="line_wrapper">комфорту<span style="color:#308080; ">.</span>&lt;/<span style="color:#200080; font-weight:bold; ">p</span><span style="color:#308080; ">&gt;</span></span></pre>
+        <h3>Зображення:</h3>
+        <img src="./images_laba2/un_selector.png" alt="un_selector" style="width:100%;">
+        <h3>Теорія:</h3>
+        <p>Універсальний селектор у CSS використовується для вибору всіх елементів на сторінці без винятку. Він
+            представлений символом зірочки (*). Основний синтаксис виглядає так: * { властивість: значення; }.
+            Використання універсального селектора дозволяє застосовувати певні стилі до всіх елементів, що може бути
+            корисно для глобального форматування, наприклад, для задання шрифтів, кольорів чи відступів.</p>
+        <p>Однак варто пам’ятати, що зловживання універсальним селектором може призвести до зниження продуктивності,
+            оскільки браузеру доводиться перевіряти всі елементи на сторінці. Це особливо важливо на великих
+            веб-сторінках або в додатках з великою кількістю елементів. Універсальний селектор може також
+            використовуватися в комбінації з іншими селекторами, щоб звузити область застосування стилів, наприклад, div
+            * { властивість: значення; }, що вибирає всі елементи всередині &lt;div>.</p>
+        <p>Цей селектор часто використовують для скидання стилів за замовчуванням у браузері, забезпечуючи єдність
+            вигляду елементів на всіх платформах. Проте, рекомендується використовувати універсальний селектор з
+            обережністю, щоб уникнути непередбачених наслідків у стилізації вашого веб-дизайну.</p>
     </main>
     <footer></footer>
 </body>
+
 </html>
