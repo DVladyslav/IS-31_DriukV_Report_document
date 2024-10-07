@@ -1,0 +1,305 @@
+<!DOCTYPE html>
+<html lang="en">
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+<body>
+    <header></header>
+    <main>
+        <h1>CSS - код (Flexbox)</h1>
+        <h2>style_task3.css</h2>
+        <pre class="code_syntax" style="color:#000020;background:#f6f8ff;">
+<span class="line_wrapper"><span style="color:#595979; ">/* Основний стиль тіла документа */</span></span>
+<span class="line_wrapper"><span style="color:#200080; font-weight:bold; ">body</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-family</span><span style="color:#308080; ">:</span> Arial<span style="color:#308080; ">,</span> <span style="color:#074726; ">sans-serif</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">f4f4f4</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Контейнер для кнопок, стиль кнопок, стиль кнопок при навдення */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>button-container <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    gap<span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding-top</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#200080; font-weight:bold; ">button</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">black</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">white</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">none</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">cursor</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">pointer</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">transition</span><span style="color:#308080; ">:</span> background-color <span style="color:#008c00; ">0.</span><span style="color:#008c00; ">3</span><span style="color:#006600; ">s</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#200080; font-weight:bold; ">button</span><span style="color:#406080; ">:</span><span style="color:#200080; font-weight:bold; ">hover</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">333</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для випадаючого меню, його кнопки та контенту */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropdown <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">position</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">relative</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">inline-block</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropbtn <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">black</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">white</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">none</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">cursor</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">pointer</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropdown-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">none</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">position</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">absolute</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">f1f1f1</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">min-width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">160</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">box-shadow</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">8</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">0</span><span style="color:#006600; ">px</span> <span style="color:#400000; ">rgba</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0.2</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">z-index</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">1</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropdown-content <span style="color:#200080; font-weight:bold; ">a</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">black</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">12</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-decoration</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">none</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">block</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropdown-content <span style="color:#200080; font-weight:bold; ">a</span><span style="color:#406080; ">:</span><span style="color:#200080; font-weight:bold; ">hover</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">ddd</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropdown<span style="color:#406080; ">:</span><span style="color:#200080; font-weight:bold; ">hover</span> <span style="color:#308080; ">.</span>dropdown-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">block</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>dropdown<span style="color:#406080; ">:</span><span style="color:#200080; font-weight:bold; ">hover</span> <span style="color:#308080; ">.</span>dropbtn <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">333</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для основного контенту */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> space-between<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">50</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для лівого блоку контенту */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>left-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">45</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">left</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>left-content <span style="color:#200080; font-weight:bold; ">h2</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">24</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">normal</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>left-content <span style="color:#200080; font-weight:bold; ">h3</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">18</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>left-content <span style="color:#200080; font-weight:bold; ">p</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">14</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">grey</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для правого блоку контенту */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>right-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">45</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">right</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>right-content <span style="color:#200080; font-weight:bold; ">h1</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">40</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#400000; ">rgb</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>outline-text <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">100</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">transparent</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    -webkit-text-stroke<span style="color:#308080; ">:</span> <span style="color:#008c00; ">3</span><span style="color:#006600; ">px</span> <span style="color:#007d45; ">lightblue</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Медіа-запит для адаптивного дизайну */</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">@</span><span style="color:#004a43; ">media</span> <span style="color:#004a43; ">(max-width: 768px) </span><span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#308080; ">.</span>button-container <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">flex-direction</span><span style="color:#308080; ">:</span> column<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">align-items</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">    <span style="color:#308080; ">.</span>content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">flex-direction</span><span style="color:#308080; ">:</span> column<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">align-items</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">    <span style="color:#308080; ">.</span>left-content<span style="color:#308080; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#308080; ">.</span>right-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">100</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">margin-bottom</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#406080; ">}</span></span>
+<span class="line_wrapper">    <span style="color:#308080; ">.</span>footer-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">flex-direction</span><span style="color:#308080; ">:</span> column<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">        <span style="color:#7779bb; font-weight:bold; ">align-items</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">    <span style="color:#308080; ">.</span>social-logos <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для інформаційного блоку, його тексту та зображень */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>info-block <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">e0f7ff</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">50</span><span style="color:#006600; ">px</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">80</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border-radius</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>info-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-bottom</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>info-content <span style="color:#200080; font-weight:bold; ">h2</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">24</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-bottom</span><span style="color:#308080; ">:</span> <span style="color:#308080; ">-</span><span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>info-content <span style="color:#200080; font-weight:bold; ">h1</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">35</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">bold</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">orange</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>info-content <span style="color:#200080; font-weight:bold; ">p</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">18</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-weight</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">normal</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">max-width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">800</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>info-images <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> space-between<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">align-items</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">flex-start</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-top</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для фото та логотипів */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>photo <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">40</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">height</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border-radius</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>logos <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">flex-wrap</span><span style="color:#308080; ">:</span> wrap<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    gap<span style="color:#308080; ">:</span> <span style="color:#008c00; ">40</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">55</span><span style="color:#006600; ">%</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>logos <span style="color:#200080; font-weight:bold; ">img</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> calc<span style="color:#308080; ">(</span><span style="color:#008c00; ">25</span><span style="color:#006600; ">%</span> - <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">height</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border-radius</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">5</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>footer-text <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-top</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">30</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">14</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">grey</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">left</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для блоку популярних курсів, карток курсів(та їх елементів) */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>popular-courses <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">333</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">white</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">40</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>popular-courses <span style="color:#200080; font-weight:bold; ">h2</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">28</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-bottom</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>courses-container <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> space-around<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">flex-wrap</span><span style="color:#308080; ">:</span> wrap<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>course-card <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">444</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border-radius</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">300</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">box-shadow</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">0</span> <span style="color:#008c00; ">4</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">8</span><span style="color:#006600; ">px</span> <span style="color:#400000; ">rgba</span><span style="color:#308080; ">(</span><span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0</span><span style="color:#308080; ">,</span> <span style="color:#008c00; ">0.2</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>course-card <span style="color:#200080; font-weight:bold; ">ul</span><span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">left</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>course-logo <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">80</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">height</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-bottom</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">15</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>details-button <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">black</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">white</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">border</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">none</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">cursor</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">pointer</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">font-size</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">16</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">transition</span><span style="color:#308080; ">:</span> background-color <span style="color:#008c00; ">0.</span><span style="color:#008c00; ">3</span><span style="color:#006600; ">s</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">margin-top</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">10</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>details-button<span style="color:#406080; ">:</span><span style="color:#200080; font-weight:bold; ">hover</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">#</span><span style="color:#008000; ">555</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#595979; ">/* Стиль для футера, тексту, логотипів соцмереж */</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>footer <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">background-color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">black</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">color</span><span style="color:#308080; ">:</span> <span style="color:#007d45; ">white</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">padding</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">20</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">text-align</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>footer-content <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">justify-content</span><span style="color:#308080; ">:</span> space-between<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">align-items</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">center</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>social-logos <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">display</span><span style="color:#308080; ">:</span> flex<span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    gap<span style="color:#308080; ">:</span> <span style="color:#008c00; ">15</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>social-logo <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">width</span><span style="color:#308080; ">:</span> <span style="color:#008c00; ">50</span><span style="color:#006600; ">px</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">height</span><span style="color:#308080; ">:</span> <span style="color:#074726; ">auto</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#7779bb; font-weight:bold; ">transition</span><span style="color:#308080; ">:</span> filter <span style="color:#008c00; ">0.</span><span style="color:#008c00; ">3</span><span style="color:#006600; ">s</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span>
+<span class="line_wrapper"><span style="color:#308080; ">.</span>social-logo<span style="color:#406080; ">:</span><span style="color:#200080; font-weight:bold; ">hover</span> <span style="color:#406080; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#008484; ">filter</span><span style="color:#308080; ">:</span> brightness<span style="color:#308080; ">(</span><span style="color:#008c00; ">4</span><span style="color:#308080; ">)</span><span style="color:#406080; ">;</span></span>
+<span class="line_wrapper"><span style="color:#406080; ">}</span></span></pre>
+    </main>
+    <footer></footer>
+</body>
+</html>
