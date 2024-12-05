@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    <title>Document</title>
+</head>
+
+<body>
+    <header>
+
+    </header>
+    <main>
+        <!-- Для більш чіткого відображення коду у звіті було використано можливості сайту https://tohtml.com/cpp (автор інструменту: Олег Паращенко)""-->
+        <h1>Завдання №1. Галерея зображень</h1>
+        <h2>Макет (Figma)</h2>
+        <img src="./images/maket_task1_gallery.png" alt="maket_task1_gallery" style="width: 60%;">
+        <img src="./images/maket_task1_hover.png" alt="maket_task1_hover" style="width: 60%;">
+        <img src="./images/maket_task1_modal.png" alt="maket_task1_modal" style="width: 60%;">
+        <h2>HTML-код (index.html)</h2>
+        <pre class="code_syntax"
+            style="color:#000000;background:#ffffff;"><span class="line_wrapper"><span style="color:#0000ff; ">&lt;!DOCTYPE html&gt;</span></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">html</span><span style="color:#008000; "> </span><span style="color:#008000; ">lang</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"en"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">head</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">meta</span><span style="color:#008000; "> </span><span style="color:#008000; ">charset</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"UTF-8"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">meta</span><span style="color:#008000; "> </span><span style="color:#008000; ">name</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"viewport"</span><span style="color:#008000; "> </span><span style="color:#008000; ">content</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"width=device-width, initial-scale=1.0"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">title</span><span style="color:#c0c0c0; ">&gt;</span>IS-<span style="color:#800080; ">31</span> Driuk LR8<span style="color:#800080; ">.</span>Task1<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">title</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">link</span><span style="color:#008000; "> </span><span style="color:#008000; ">rel</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"stylesheet"</span><span style="color:#008000; "> </span><span style="color:#008000; ">href</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./CSS/style.css"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#008000; ">&lt;!--Посилання на мініфікований (.min) CSS файл бібліотеки basicLightbox для модального вікна --&gt;</span>    </span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">link</span><span style="color:#008000; "> </span><span style="color:#008000; ">href</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.css"</span><span style="color:#008000; "> </span><span style="color:#008000; ">rel</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"stylesheet"</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">head</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">body</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">header</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span>Лабораторна робота №<span style="color:#800080; ">8</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h1</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">header</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#808080; ">main</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span>Завдання №<span style="color:#800080; ">1.</span> Галерея зображень<span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">h2</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">a</span><span style="color:#008000; "> </span><span style="color:#008000; ">href</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./2-form.html"</span><span style="color:#008000; "> </span><span style="color:#008000; ">class</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"buttonblue"</span><span style="color:#c0c0c0; ">&gt;</span>Завдання №<span style="color:#800080; ">2</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">a</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">        <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">ul</span><span style="color:#008000; "> </span><span style="color:#008000; ">class</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"gallery"</span><span style="color:#c0c0c0; ">&gt;</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">ul</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;/</span><span style="color:#808080; ">main</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">footer</span><span style="color:#c0c0c0; ">&gt;</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">footer</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">script</span><span style="color:#008000; "> </span><span style="color:#008000; ">type</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"module"</span><span style="color:#008000; "> </span><span style="color:#008000; ">src</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"./JS/gallery.js"</span><span style="color:#c0c0c0; ">&gt;</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">script</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper">    <span style="color:#008000; ">&lt;!--Посилання на мініфікований (.min) JS файл бібліотеки basicLightbox для модального вікна --&gt;</span>  </span>
+<span class="line_wrapper">    <span style="color:#c0c0c0; ">&lt;</span><span style="color:#0000ff; ">script</span><span style="color:#008000; "> </span><span style="color:#008000; ">src</span><span style="color:#0000ff; ">=</span><span style="color:#800000; ">"https://cdn.jsdelivr.net/npm/basiclightbox@5.0.4/dist/basicLightbox.min.js"</span><span style="color:#c0c0c0; ">&gt;</span><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">script</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">body</span><span style="color:#c0c0c0; ">&gt;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#c0c0c0; ">&lt;/</span><span style="color:#0000ff; ">html</span><span style="color:#c0c0c0; ">&gt;</span></span></pre>
+        <h2>CSS-код (style.css)</h2>
+        <pre class="code_syntax" style="color:#000000;background:#ffffff;"><span class="line_wrapper"><span style="color:#008000; ">/* Загальні стилі сторінок */</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">body</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">background-color</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">#</span><span style="color:#800080; ">C0DFC7</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">h1</span><span style="color:#0000ff; ">,</span> <span style="color:#0000ff; ">h2</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">text-align</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">center</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">color</span><span style="color:#0000ff; ">:</span> <span style="color:#0000ff; ">rgb</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">5</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">21</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">197</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#008000; ">/* Стилі для списку галереї зображень */</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">ul</span><span style="color:#0000ff; ">.</span>gallery <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">list-style</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">none</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">0</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">padding</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">0</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">display</span><span style="color:#0000ff; ">:</span> flex<span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">justify-content</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">center</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">flex-wrap</span><span style="color:#0000ff; ">:</span> wrap<span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">ul</span><span style="color:#0000ff; ">.</span>gallery <span style="color:#0000ff; ">li</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">330</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">height</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">220</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">8</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">10</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">ul</span><span style="color:#0000ff; ">.</span>gallery <span style="color:#0000ff; ">li</span> <span style="color:#0000ff; ">img</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">position</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">relative</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">100</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">height</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">100</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">transition</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">all</span> <span style="color:#800080; ">0.</span><span style="color:#800080; ">9</span><span style="color:#800080; ">s</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">ul</span><span style="color:#0000ff; ">.</span>gallery <span style="color:#0000ff; ">li</span> <span style="color:#0000ff; ">img</span><span style="color:#0000ff; ">:</span><span style="color:#0000ff; ">hover</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">107</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">height</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">107</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    translate<span style="color:#0000ff; ">:</span> <span style="color:#0000ff; ">-</span><span style="color:#800080; ">2.5</span><span style="color:#800080; ">%</span> <span style="color:#0000ff; ">-</span><span style="color:#800080; ">2.5</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">box-shadow</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">0</span> <span style="color:#800080; ">0</span> <span style="color:#800080; ">15</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">5</span><span style="color:#800080; ">px</span> <span style="color:#0000ff; ">rgba</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">255</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">247</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0.8</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> </span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#008000; ">/* Стиль для модального вікна */</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">div</span><span style="color:#0000ff; ">.</span>modalWindow<span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">display</span><span style="color:#0000ff; ">:</span> flex<span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">flex-direction</span><span style="color:#0000ff; ">:</span> column<span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">align-content</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">center</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">height</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">600</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span>    </span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">div</span><span style="color:#0000ff; ">.</span>modalWindow <span style="color:#0000ff; ">img</span><span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">auto</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">height</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">90</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span>    </span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">div</span><span style="color:#0000ff; ">.</span>modalWindow <span style="color:#0000ff; ">p</span><span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">color</span><span style="color:#0000ff; ">:</span> <span style="color:#0000ff; ">rgb</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">212</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">255</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-size</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">25</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-weight</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">bold</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">text-align</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">center</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#008000; ">/* Стиль для кнопки переходу між сторінками */</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">a</span><span style="color:#0000ff; ">.</span>buttonblue <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">200</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">padding</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">15</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">25</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">color</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">#</span><span style="color:#800080; ">fff</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">background-color</span><span style="color:#0000ff; ">:</span> <span style="color:#0000ff; ">rgb</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">28</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">57</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">110</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> </span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-size</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">16</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-weight</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">bold</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">text-align</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">center</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">text-decoration</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">none</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">border-radius</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">5</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">transition</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">0.</span><span style="color:#800080; ">3</span><span style="color:#800080; ">s</span> <span style="color:#008000; ">ease</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">display</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">block</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin-left</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">auto</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin-right</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">auto</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">a</span><span style="color:#0000ff; ">.</span>buttonblue<span style="color:#0000ff; ">:</span><span style="color:#0000ff; ">hover</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">transform</span><span style="color:#0000ff; ">:</span> <span style="color:#0000ff; ">scale</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">1.07</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">box-shadow</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">0</span> <span style="color:#800080; ">4</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">8</span><span style="color:#800080; ">px</span> <span style="color:#0000ff; ">rgba</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0.2</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#008000; ">/* Стиль для форми зворотнього зв'язку*/</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form<span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin-left</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">35</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin-right</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">35</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin-top</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">3</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">position</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">absolute</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">30</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span> </span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-size</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">20</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">background-color</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">#</span><span style="color:#800080; ">fff</span><span style="color:#0000ff; ">;</span> </span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">box-shadow</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">0</span> <span style="color:#800080; ">4</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">8</span><span style="color:#800080; ">px</span> <span style="color:#0000ff; ">rgba</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">0.2</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> </span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">border-radius</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">10</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span> </span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">padding</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">20</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">button</span><span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">background-color</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">#</span><span style="color:#800080; ">012fd5</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">border</span><span style="color:#0000ff; ">:</span><span style="color:#008000; ">none</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">color</span><span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">white</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-weight</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">bold</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">border-radius</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">8</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">padding</span><span style="color:#0000ff; ">:</span><span style="color:#800080; ">10</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">20</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">margin</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">10</span><span style="color:#800080; ">px</span> <span style="color:#800080; ">0</span><span style="color:#800080; ">px</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">transition</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">all</span> <span style="color:#800080; ">0.</span><span style="color:#800080; ">5</span><span style="color:#800080; ">s</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">label</span><span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">color</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">#</span><span style="color:#800080; ">012fd5</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">font-weight</span><span style="color:#0000ff; ">:</span> <span style="color:#008000; ">bold</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">button</span><span style="color:#0000ff; ">:</span><span style="color:#0000ff; ">hover</span><span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">background-color</span><span style="color:#0000ff; ">:</span><span style="color:#800080; ">#</span><span style="color:#800080; ">6C8CFF</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">input</span><span style="color:#0000ff; ">,</span> <span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">textarea</span><span style="color:#0000ff; ">{</span>    </span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">width</span><span style="color:#0000ff; ">:</span> <span style="color:#800080; ">100</span><span style="color:#800080; ">%</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">transition</span><span style="color:#0000ff; ">:</span> border-color <span style="color:#800080; ">0.</span><span style="color:#800080; ">8</span><span style="color:#800080; ">s</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">input</span><span style="color:#0000ff; ">:</span><span style="color:#0000ff; ">hover</span><span style="color:#0000ff; ">,</span> <span style="color:#0000ff; ">form</span><span style="color:#0000ff; ">.</span>feedback-form <span style="color:#0000ff; ">textarea</span><span style="color:#0000ff; ">:</span><span style="color:#0000ff; ">hover</span><span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; background:#c0c0c0; ">border-color</span><span style="color:#0000ff; ">:</span>  <span style="color:#0000ff; ">rgb</span><span style="color:#0000ff; ">(</span><span style="color:#800080; ">21</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">1</span><span style="color:#0000ff; ">,</span> <span style="color:#800080; ">104</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span></span></pre>
+        <h2>JS-код (gallery.js)</h2>
+        <pre class="code_syntax" style="color:#000000;background:#ffffff;"><span class="line_wrapper"><span style="color:#008000; ">//import * as basicLightbox from "../node_modules/basiclightbox/src/scripts/main.js"</span></span>
+<span class="line_wrapper"><span style="color:#008000; ">// Масив об'єктів з інформацією про зображення</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">const</span> images <span style="color:#0000ff; ">=</span> <span style="color:#0000ff; ">[</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://nauua.org/media/k2/items/cache/24ca0a85fc075dc4babe60ca9c74b464_XL.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://nauua.org/media/k2/items/cache/24ca0a85fc075dc4babe60ca9c74b464_XL.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Замок Любарта </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://www.worldhistory.org/img/c/p/1600x900/14901.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://www.worldhistory.org/img/c/p/1600x900/14901.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Хотинська фортеця </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://lavra.ua/wp-content/uploads/2024/03/photo_2024-03-16_09-59-10-e1710586736540.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://lavra.ua/wp-content/uploads/2024/03/photo_2024-03-16_09-59-10-e1710586736540.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Києво-Печерська лавра </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://18fc33b6ca.cbaul-cdnwnd.com/9c7578031084e7f79abd67a468c3faf9/200000021-8c67f8d5e6/207797_15.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://18fc33b6ca.cbaul-cdnwnd.com/9c7578031084e7f79abd67a468c3faf9/200000021-8c67f8d5e6/207797_15.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> «Ластівчине гніздо» </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://travels.in.ua/api/Photo/PhotoStreamCPOI/36880</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://travels.in.ua/api/Photo/PhotoStreamCPOI/36880</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Будинок з химерами </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://upload.wikimedia.org/wikipedia/commons/6/67/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BD%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%BE%D0%BF%D0%B5%D1%80%D0%B8_%D1%82%D0%B0_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D1%83_%D1%96%D0%BC%D0%B5%D0%BD%D1%96_%D0%A1%D0%BE%D0%BB%D0%BE%D0%BC%D1%96%D1%97_%D0%9A%D1%80%D1%83%D1%88%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D1%97_13.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://upload.wikimedia.org/wikipedia/commons/6/67/%D0%9B%D1%8C%D0%B2%D1%96%D0%B2%D1%81%D1%8C%D0%BA%D0%B8%D0%B9_%D0%BD%D0%B0%D1%86%D1%96%D0%BE%D0%BD%D0%B0%D0%BB%D1%8C%D0%BD%D0%B8%D0%B9_%D0%B0%D0%BA%D0%B0%D0%B4%D0%B5%D0%BC%D1%96%D1%87%D0%BD%D0%B8%D0%B9_%D1%82%D0%B5%D0%B0%D1%82%D1%80_%D0%BE%D0%BF%D0%B5%D1%80%D0%B8_%D1%82%D0%B0_%D0%B1%D0%B0%D0%BB%D0%B5%D1%82%D1%83_%D1%96%D0%BC%D0%B5%D0%BD%D1%96_%D0%A1%D0%BE%D0%BB%D0%BE%D0%BC%D1%96%D1%97_%D0%9A%D1%80%D1%83%D1%88%D0%B5%D0%BB%D1%8C%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%BE%D1%97_13.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Львівська національна опера </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://www.zoda.gov.ua/images/article/1/000141/141134/picture.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://www.zoda.gov.ua/images/article/1/000141/141134/picture.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Національний заповідник «Хортиця» </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://vidviday.ua/blog/wp-content/uploads/2016/01/chernovtsy-tam-ua1.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://vidviday.ua/blog/wp-content/uploads/2016/01/chernovtsy-tam-ua1.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> Чернівецький національний університет </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">preview:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/%D0%9F%27%D1%8F%D1%82%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%B2%D0%BD%D0%BE%D1%87%D1%96.jpg/2560px-%D0%9F%27%D1%8F%D1%82%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%B2%D0%BD%D0%BE%D1%87%D1%96.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        <span style="color:#808000; ">original:</span></span>
+<span class="line_wrapper">            <span style="color:#ff0000; ">'</span><span style="color:#800000; ">https://upload.wikimedia.org/wikipedia/commons/thumb/b/b6/%D0%9F%27%D1%8F%D1%82%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%B2%D0%BD%D0%BE%D1%87%D1%96.jpg/2560px-%D0%9F%27%D1%8F%D1%82%D0%BD%D0%B8%D1%86%D1%8C%D0%BA%D0%B0_%D1%86%D0%B5%D1%80%D0%BA%D0%B2%D0%B0_%D0%B2%D0%BD%D0%BE%D1%87%D1%96.jpg</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">        description<span style="color:#0000ff; ">:</span> <span style="color:#ff0000; ">'</span><span style="color:#800000; "> П`ятницька церква </span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">}</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">]</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper"><span style="color:#008000; ">// Елемент списку галереї</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">let</span> gallery <span style="color:#0000ff; ">=</span> document<span style="color:#0000ff; ">.</span>querySelector<span style="color:#0000ff; ">(</span><span style="color:#ff0000; ">'</span><span style="color:#800000; ">ul.gallery</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#008000; ">// Цикл, що перебирає масив зображень та додає кожне зображення до DOM</span></span>
+<span class="line_wrapper">images<span style="color:#0000ff; ">.</span><span style="color:#0000ff; ">forEach</span><span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">(</span>image<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">&gt;</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    imageAdd<span style="color:#0000ff; ">(</span>image<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#008000; ">// Функція, що створює елементи списку та додає їх до галереї</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">function</span> imageAdd<span style="color:#0000ff; ">(</span>imgObj<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">let</span> imgElem <span style="color:#0000ff; ">=</span> document<span style="color:#0000ff; ">.</span>createElement<span style="color:#0000ff; ">(</span><span style="color:#ff0000; ">"</span><span style="color:#800000; ">img</span><span style="color:#ff0000; ">"</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    imgElem<span style="color:#0000ff; ">.</span>src <span style="color:#0000ff; ">=</span> imgObj<span style="color:#0000ff; ">.</span>preview<span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    imgElem<span style="color:#0000ff; ">.</span>alt <span style="color:#0000ff; ">=</span> imgObj<span style="color:#0000ff; ">.</span>description<span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">let</span> listItem <span style="color:#0000ff; ">=</span> document<span style="color:#0000ff; ">.</span>createElement<span style="color:#0000ff; ">(</span><span style="color:#ff0000; ">"</span><span style="color:#800000; ">li</span><span style="color:#ff0000; ">"</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    listItem<span style="color:#0000ff; ">.</span>append<span style="color:#0000ff; ">(</span>imgElem<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    gallery<span style="color:#0000ff; ">.</span>append<span style="color:#0000ff; ">(</span>listItem<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#008000; ">// Обробник події "click" для галереї</span></span>
+<span class="line_wrapper">gallery<span style="color:#0000ff; ">.</span>addEventListener<span style="color:#0000ff; ">(</span><span style="color:#ff0000; ">'</span><span style="color:#800000; ">click</span><span style="color:#ff0000; ">'</span><span style="color:#0000ff; ">,</span> <span style="color:#0000ff; ">function</span> <span style="color:#0000ff; ">(</span>event<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">{</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">let</span> clickedImage <span style="color:#0000ff; ">=</span> images<span style="color:#0000ff; ">.</span>find<span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">(</span>img<span style="color:#0000ff; ">)</span> <span style="color:#0000ff; ">=</span><span style="color:#0000ff; ">&gt;</span> img<span style="color:#0000ff; ">.</span>preview <span style="color:#0000ff; ">===</span> event<span style="color:#0000ff; ">.</span>target<span style="color:#0000ff; ">.</span>src<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    console<span style="color:#0000ff; ">.</span><span style="color:#0000ff; ">log</span><span style="color:#0000ff; ">(</span>clickedImage<span style="color:#0000ff; ">.</span>original<span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper">    <span style="color:#008000; ">// Створення модального вікна з повнорозмірним зображенням</span></span>
+<span class="line_wrapper">    <span style="color:#0000ff; ">const</span> instance <span style="color:#0000ff; ">=</span> basicLightbox<span style="color:#0000ff; ">.</span>create<span style="color:#0000ff; ">(</span><span style="color:#ff0000; ">`</span><span style="color:#800000; "></span></span>
+<span class="line_wrapper"><span style="color:#800000; ">        &lt;div class="modalWindow"&gt;</span></span>
+<span class="line_wrapper"><span style="color:#800000; ">                 &lt;img src="</span><span style="color:#ff0000; ">${</span><span style="color:#ff0000; ">clickedImage</span><span style="color:#0000ff; ">.</span><span style="color:#ff0000; ">original</span><span style="color:#ff0000; ">}</span><span style="color:#800000; ">" alt="</span><span style="color:#ff0000; ">${</span><span style="color:#ff0000; ">clickedImage</span><span style="color:#0000ff; ">.</span><span style="color:#ff0000; ">description</span><span style="color:#ff0000; ">}</span><span style="color:#800000; ">"&gt;</span></span>
+<span class="line_wrapper"><span style="color:#800000; ">                &lt;p&gt;</span><span style="color:#ff0000; ">${</span><span style="color:#ff0000; ">clickedImage</span><span style="color:#0000ff; ">.</span><span style="color:#ff0000; ">description</span><span style="color:#ff0000; ">}</span><span style="color:#800000; ">&lt;/p&gt;</span></span>
+<span class="line_wrapper"><span style="color:#800000; ">        &lt;/div&gt;</span></span>
+<span class="line_wrapper"><span style="color:#800000; ">    </span><span style="color:#ff0000; ">`</span><span style="color:#0000ff; ">,</span> <span style="color:#0000ff; ">{</span> closable<span style="color:#0000ff; ">:</span> <span style="color:#808000; ">true</span> <span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span> <span style="color:#008000; ">// Налаштування модального вікна, щоб його можна було закривати</span></span>
+<span class="line_wrapper"></span>
+<span class="line_wrapper">    <span style="color:#008000; ">// Відображення модального вікна</span></span>
+<span class="line_wrapper">    instance<span style="color:#0000ff; ">.</span>show<span style="color:#0000ff; ">(</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"><span style="color:#0000ff; ">}</span><span style="color:#0000ff; ">)</span><span style="color:#0000ff; ">;</span></span>
+<span class="line_wrapper"></span></pre>
+        <h2>Підключення бібліотеки через командний рядок (за допомогою npm)</h2>
+        <img src="./images/addlibrary_1.png" alt="addlibrary_1" style="width: 40%;">
+        <img src="./images/addlibrary_2.png" alt="addlibrary_2" style="width: 40%;">
+        <h2>Результат виконання</h2>
+        <img src="./images/result_task1_1.png" alt="result_task1_1" style="width: 70%;">
+        <img src="./images/result_task1_2.png" alt="result_task1_2" style="width: 70%;">
+        <img src="./images/result_task1_3.png" alt="result_task1_3" style="width: 70%;">
+
+    </main>
+    <footer></footer>
+</body>
+
+</html>
